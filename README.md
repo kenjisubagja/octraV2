@@ -47,6 +47,7 @@ octraReceiver2 1.25
 ### Aktifkan environment, dan pastikan codespace/VPS sudah install octra yang original:
 ```bash
 git clone https://github.com/kenjisubagja/octraV2
+cd octraV2
 ```
 ```bash
 python3 -m venv venv

@@ -63,7 +63,7 @@ Tidak lanjut ke proses berikutnya sebelum transaksi sukses
 ## 👤
 Created By Kenjisubagja:
 
-**Kenji Subagja**  
+**Contact me**  
 📨 Telegram: [@kenjisubagja](https://t.me/kenjisubagja)  
 🐦 Twitter/X: [@kenjisubagja](https://x.com/kenjisubagja)
 

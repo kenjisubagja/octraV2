@@ -38,10 +38,12 @@ project-folder/
 Setiap baris berisi:
 <octra_address> <jumlah_OCT>
 ### 🖼️ Contoh Isi `p.txt`
-![Contoh p.txt](<img width="485" height="237" alt="image" src="https://github.com/user-attachments/assets/1c368a7a-f47f-4a51-8657-aeade8db5539" />
-)
-## ✍️ Format File `wallet.json`
+
+![Contoh p.txt](https://raw.githubusercontent.com/kenjisubagja/airdop/refs/heads/main/photo_2025-07-11_03-01-12.jpg)
+
+## ✍️ Format File `wallet.json` Perlu di edit!!
 itu sama aja kek kita mau run client Octra jadi ubah terlbih dahulu
+![Contoh wallet.json](https://raw.githubusercontent.com/kenjisubagja/airdop/refs/heads/main/photo_2025-07-11_03-07-15.jpg)
 
 ## ▶️ Cara Menjalankan
 

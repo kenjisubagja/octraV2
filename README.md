@@ -58,10 +58,11 @@ cd octraV2
 ```bash
 pip install -r requirements.txt
 ```
-Run (Ubah dulu `wallet.json`)
+Run (Ubah dulu `wallet.json`!!!!!)
 ```bash
 python3 auto_runner.py
 ```
+kalau Duplicate transaction biarin aja, karna tx sebelum nya harus sukses dulu baru lanjut ke fitur selanjut nya
 ## 📌 Ketahanan & Retry
 Jika ada transaksi gagal (misal: nonce conflict, tidak ada public key, node lambat), script akan:
 

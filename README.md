@@ -7,7 +7,7 @@ Script ini menjalankan serangkaian operasi termasuk:
 - Enkripsi saldo
 - Dekripsi saldo
 - Private transfer
-- Klaim private transfer
+- Claim private transfer
 
 Semua proses disertai **retry otomatis dan delay yang aman** untuk memastikan setiap transaksi berhasil diproses node.
 

@@ -38,7 +38,7 @@ project-folder/
 ## ✍️ Format File `p.txt`
 Setiap baris berisi:
 <octra_address> <jumlah_OCT>
-### 🖼️ Contoh Isi `p.txt`
+### 🖼️ Contoh Isi `p.txt` (MASUKIN WALLET YANG UDAH TX PRIVATE KALAU BELUM TX PRIVATE PATI ERROR)
 
 ![Contoh p.txt](https://raw.githubusercontent.com/kenjisubagja/airdop/refs/heads/main/photo_2025-07-11_03-01-12.jpg)
 

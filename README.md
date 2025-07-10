@@ -47,6 +47,7 @@ itu sama aja kek kita mau run client Octra jadi ubah terlbih dahulu
 
 ### Pastikan environment aktif:
 ```bash
+python3 -m venv venv
 source venv/bin/activate
 ```
 ## Clone repositori:

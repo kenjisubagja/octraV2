@@ -58,7 +58,7 @@ cd octraV2
 ```bash
 pip install -r requirements.txt
 ```
-Run
+Run (Ubah dulu `wallet.json`)
 ```bash
 python3 auto_runner.py
 ```

@@ -32,6 +32,7 @@ project-folder/
 ├── auto_runner.py     # Script utama ini
 ├── cli.py             # Modul CLI untuk transaksi (harus terhubung dengan node Octra)
 └── p.txt              # Daftar penerima dan jumlah OCT
+└── wallet.json        # Privatekey wallet octra
 ```
 ## ✍️ Format File `p.txt`
 Setiap baris berisi:
@@ -39,8 +40,8 @@ Setiap baris berisi:
 ### Contoh:
 oct8rjAyUM93vQ5VXBdbfEtAUsFQxM75kac7kpgjVSu1WAg 0.5  
 oct9Yjx6Sks5Z8bKqVzGChsN6CkWqz5mB59EAFLSnpDFoKd 1.25
-
----
+## ✍️ Format File `wallet.json`
+itu sama aja kek kita mau run client Octra jadi ubah terlbih dahulu
 
 ## ▶️ Cara Menjalankan
 

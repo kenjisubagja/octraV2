@@ -1,72 +1,73 @@
-# 🔄 Octra Auto Runner
+# 🔁 Octra Auto Runner (Single Wallet)
 
-Script Python untuk menjalankan transaksi **multi-wallet** otomatis di jaringan **Octra**, termasuk fitur:
+Script Python ini digunakan untuk melakukan **transaksi otomatis di jaringan Octra** dari satu wallet.  
+Script ini menjalankan serangkaian operasi termasuk:
 
-- MULTI-SEND
-- ENCRYPT
-- DECRYPT
-- PRIVATE TRANSFER
-- CLAIM
+- Multi-Send ke banyak penerima
+- Enkripsi saldo
+- Dekripsi saldo
+- Private transfer
+- Klaim private transfer
 
-Dengan sistem retry otomatis dan jeda antar proses agar semua transaksi **berhasil dikirim dengan stabil**.
+Semua proses disertai **retry otomatis dan delay yang aman** untuk memastikan setiap transaksi berhasil diproses node.
 
 ---
 
-## 📦 Fitur Utama
+## ⚙️ Fitur Utama
 
-| Fitur               | Deskripsi                                                                 |
+| Proses             | Deskripsi                                                                 |
 |--------------------|---------------------------------------------------------------------------|
-| 🔁 MULTI-SEND       | Kirim ke banyak penerima dari file `p.txt`, jeda 15 detik per transaksi   |
-| 🔐 ENCRYPT          | Enkripsi 5 OCT, retry hingga sukses, jeda 20 detik setelah berhasil       |
-| 🔓 DECRYPT          | Dekripsi 1 OCT, retry hingga sukses, jeda 20 detik setelah berhasil       |
-| 🕵️ PRIVATE TRANSFER | Kirim privat 0.1 OCT ke tiap penerima, jeda 60 detik per transaksi        |
-| 📥 CLAIM            | Klaim semua private transfer masuk, retry setiap ID hingga berhasil       |
+| 🔁 Multi-Send       | Mengirim OCT ke banyak penerima dari file `p.txt` (delay 15 detik/tx)     |
+| 🔐 Enkripsi         | Enkripsi saldo sebesar 5 OCT (retry hingga sukses, delay 20 detik)        |
+| 🔓 Dekripsi         | Dekripsi saldo sebesar 1 OCT (delay 1 menit saat gagal, 20 detik sesudah) |
+| 🕵️ Private Transfer | Kirim privat 0.1 OCT ke setiap penerima (delay 60 detik antar tx)         |
+| 📥 Klaim Transfer   | Klaim semua private transfer yang masuk (retry per ID jika gagal)         |
 
 ---
 
-## ✍️ Format File 
+## 📂 Struktur File
 
-### `wallet.txt`
-Daftar wallet yang akan digunakan, ```address1|||priavtekey1```:
-```sh
-octraAddress1|||privateKey1
-octraAddress2|||privateKey2
+```text
+project-folder/
+├── auto_runner.py     # Script utama ini
+├── cli.py             # Modul CLI untuk transaksi (harus terhubung dengan node Octra)
+└── p.txt              # Daftar penerima dan jumlah OCT
 ```
-
-### `p.txt`
-Daftar penerima + jumlah OCT:
-```sh
-octraReceiver1 0.5
-octraReceiver2 1.25
-```
+## ✍️ Format File `p.txt`
+Setiap baris berisi:
+<octra_address> <jumlah_OCT>
+### Contoh:
+oct8rjAyUM93vQ5VXBdbfEtAUsFQxM75kac7kpgjVSu1WAg 0.5  
+oct9Yjx6Sks5Z8bKqVzGChsN6CkWqz5mB59EAFLSnpDFoKd 1.25
 
 ---
 
 ## ▶️ Cara Menjalankan
 
-### Aktifkan environment, dan pastikan codespace/VPS sudah install octra yang original:
+### Pastikan environment aktif:
+```bash
+source venv/bin/activate
+```
+## Clone repositori:
 ```bash
 git clone https://github.com/kenjisubagja/octraV2
 cd octraV2
 ```
+Run
 ```bash
-python3 -m venv venv
-source venv/bin/activate
+python3 auto_runner.py
 ```
-✅ Sistem Retry Otomatis
-Setiap langkah akan:
+## 📌 Ketahanan & Retry
+Jika ada transaksi gagal (misal: nonce conflict, tidak ada public key, node lambat), script akan:
 
-Retry otomatis jika gagal (misalnya nonce conflict, "no public key", dll)
+Menunggu beberapa detik
 
-Menunggu beberapa detik sebelum mencoba ulang
+Mencoba ulang (hingga berhasil)
 
-Tidak lanjut ke proses berikutnya sebelum transaksi sukses
+Tidak lanjut ke langkah berikutnya sebelum langkah sebelumnya sukses
 ## 👤
 Created By Kenjisubagja:
 
 **Contact me**  
 📨 Telegram: [@kenjisubagja](https://t.me/kenjisubagja)  
 🐦 Twitter/X: [@kenjisubagja](https://x.com/kenjisubagja)
-
-
-

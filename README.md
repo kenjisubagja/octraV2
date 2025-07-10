@@ -37,9 +37,8 @@ project-folder/
 ## ✍️ Format File `p.txt`
 Setiap baris berisi:
 <octra_address> <jumlah_OCT>
-### Contoh:
-oct8rjAyUM93vQ5VXBdbfEtAUsFQxM75kac7kpgjVSu1WAg 0.5  
-oct9Yjx6Sks5Z8bKqVzGChsN6CkWqz5mB59EAFLSnpDFoKd 1.25
+### 🖼️ Contoh Isi `p.txt`
+![Contoh p.txt]([https://github.com/username/repo-name/blob/main/sample-p-txt.png?raw=true](https://github.com/kenjisubagja/airdop/blob/main/photo_2025-07-11_03-01-12.jpg?raw=true))
 ## ✍️ Format File `wallet.json`
 itu sama aja kek kita mau run client Octra jadi ubah terlbih dahulu
 

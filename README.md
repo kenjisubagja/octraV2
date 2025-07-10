@@ -1,4 +1,5 @@
 # 🔁 Octra Auto Runner (Single Wallet)
+![Contoh Demo](https://raw.githubusercontent.com/kenjisubagja/airdop/refs/heads/main/photo_2025-07-11_03-12-31.jpg)
 
 Script Python ini digunakan untuk melakukan **transaksi otomatis di jaringan Octra** dari satu wallet.  
 Script ini menjalankan serangkaian operasi termasuk:

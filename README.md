@@ -68,7 +68,6 @@ Mencoba ulang (hingga berhasil)
 Tidak lanjut ke langkah berikutnya sebelum langkah sebelumnya sukses
 ## 👤
 Created By Kenjisubagja:
-
 **Contact me**  
 📨 Telegram: [@kenjisubagja](https://t.me/kenjisubagja)  
 🐦 Twitter/X: [@kenjisubagja](https://x.com/kenjisubagja)

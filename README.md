@@ -49,6 +49,9 @@ itu sama aja kek kita mau run client Octra jadi ubah terlbih dahulu
 ```bash
 source venv/bin/activate
 ```
+```bash
+pip install -r requirements.txt
+```
 ## Clone repositori:
 ```bash
 git clone https://github.com/kenjisubagja/octraV2

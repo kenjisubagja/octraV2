@@ -32,19 +32,18 @@ async def multi_send_from_file():
     if n is None:
         print("[SKIP] Gagal ambil nonce.")
         return
-    for i, (to, a) in enumerate(rcp):
-        while True:
-            try:
-                t, _ = mk(to, a, n + 1 + i)
-                ok, res, *_ = await snd(t)
-                if ok:
-                    print(f"[✓] TX ke {to} ({a} OCT) sukses: {res[:12]}...")
-                    break
-                else:
-                    print(f"[✗] TX ke {to} gagal: {res}, retry dalam 10 detik...")
-            except Exception as e:
-                print(f"[!] Exception TX ke {to}: {e}, retry dalam 10 detik...")
-            await asyncio.sleep(10)
+    current_nonce = n + 1
+    for to, a in rcp:
+        try:
+            t, _ = mk(to, a, current_nonce)
+            ok, res, *_ = await snd(t)
+            if ok:
+                print(f"[✓] TX ke {to} ({a} OCT) sukses: {res[:12]}...")
+            else:
+                print(f"[✗] TX ke {to} gagal: {res}, lewati ke nonce berikutnya...")
+        except Exception as e:
+            print(f"[!] Exception TX ke {to}: {e}, lewati ke nonce berikutnya...")
+        current_nonce += 1
         await asyncio.sleep(15)
 
 async def do_encrypt():
